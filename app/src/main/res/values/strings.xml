@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="fio">Иванов Иван Иванович, гр. БПИ 171</string>
+    <string name="fio">IAEgorushkin IT-31D</string>
+    <string name="hint_editText">Введите имя</string>
 </resources>
