@@ -80,7 +80,7 @@ public class SecondActivity extends AppCompatActivity {
 # 10 
 ![studio64_vSJlrfFjYD.gif](studio64_vSJlrfFjYD.gif)
 # 11
-
+![studio64_XgxFK4LgYG.gif](studio64_XgxFK4LgYG.gif)
 # 12
 ![studio64_QuRf76z57x.gif](studio64_QuRf76z57x.gif)
 # 13
