@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             dialog.setMessage(getTitle().toString()+ " версия "+
                     getPackageManager().getPackageInfo(getPackageName(),0).versionName +
-                    "\r\n\nАвтор - Мирошниченко Денис Александрович, гр. БПИ225");
+                    "\r\n\n534yb e5h erth erth we");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
