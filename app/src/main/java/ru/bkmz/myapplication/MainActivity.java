@@ -1,35 +1,63 @@
 package ru.bkmz.myapplication;
-
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.media.AudioAttributes;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView; // Declare variable without initializing it
-    EditText editText; // Declare variable without initializing it
-    Button button; // Declare variable without initializing it
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Set layout before accessing views
+        setContentView(R.layout.activity_main);
 
-        // Now that setContentView() has been called, we can initialize our views
-        textView = (TextView) findViewById(R.id.textView);
-        editText = (EditText) findViewById(R.id.editText);
-        button = (Button) findViewById(R.id.button);
-
-        textView.setText(""); // This line can effectively be removed. TextView will be empty by default or can be set in XML layout
-        button.setOnClickListener(new View.OnClickListener() {
+        Button notifyButton = findViewById(R.id.notifyButton);
+        notifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("Привет, " + editText.getText().toString() + "!");
-                // This will set the text to "Привет, [User Input]!" upon clicking the button.
+                createNotificationChannel();
+                sendNotification();
             }
         });
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("MY_CHANNEL_ID", "My Notifications", NotificationManager.IMPORTANCE_HIGH);
+
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .setUsage(AudioAttributes.USAGE_NOTIFICATION)
+                    .build();
+
+            channel.setDescription("Channel description");
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
+    private void sendNotification() {
+        Notification.Builder builder = new Notification.Builder(this)
+                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setContentTitle("Hi from Alex")
+                .setContentText("Hey, listen!")
+                .setTicker("New notification!")
+                ;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            builder.setChannelId("MY_CHANNEL_ID");
+        }
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(0, builder.build());
     }
 }
