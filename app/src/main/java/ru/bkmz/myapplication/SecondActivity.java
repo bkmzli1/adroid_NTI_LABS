@@ -17,7 +17,7 @@ public class SecondActivity extends AppCompatActivity {
 
         // Определяем элементы, в данном случае TextView и кнопку
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView textView = findViewById(R.id.textView6);
-        textView.setText("Вы ввели:" + MainActivity.text2remember); // Устанавливаем текст из переменной MainActivity.text2remember
+//        textView.setText("Вы ввели:" + MainActivity.text2remember); // Устанавливаем текст из переменной MainActivity.text2remember
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button button = findViewById(R.id.button2);
 

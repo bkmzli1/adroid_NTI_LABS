@@ -59,6 +59,15 @@ public class SecondActivity extends AppCompatActivity {
 ```
 # LR4
 
-![img.png](LR4/img.png)
-![img_1.png](LR4/img_1.png)
+![img.png](../app/src/main/res/drawable/img.png)
+![img_1.png](../app/src/main/res/drawable/img_1.png)
+
+# LR5
+![img.png](LR5/img.png)
+![studio64_EfiQLguP6R.gif](LR5/studio64_EfiQLguP6R.gif)
+
+# LR6
+![studio64_tvbaRI3i9L.gif](LR6/studio64_tvbaRI3i9L.gif)
+# LR7
+![img_1.png](img_1.png)
 
