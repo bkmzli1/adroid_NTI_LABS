@@ -1,10 +1,11 @@
-package com.example.lab_12;
+package com.example.lab_121;
 
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import com.example.lab_121.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AlertDialog;
@@ -17,7 +18,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.lab_12.databinding.ActivityMainBinding;
+import com.example.lab_121.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             dialog.setMessage(getTitle().toString()+ " версия "+
                     getPackageManager().getPackageInfo(getPackageName(),0).versionName +
-                    "\r\n\nьи тиоьтиьтмьрмьртмоьрм");
+                    "\r\n\nсрсрпртьомьоморпсрпа");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
