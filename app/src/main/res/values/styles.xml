@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="style1" parent="@android:style/TextAppearance">
         <item name="android:textColor">#000000</item>
         <item name="android:textSize">30sp</item>
         <item name="android:typeface">monospace</item>
     </style>
+
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -16,6 +18,7 @@
         <item name="android:textAllCaps">true</item> <!-- Приведение текста к верхнему регистру -->
         <item name="android:typeface">monospace</item> <!-- Моноширинный шрифт -->
     </style>
+
     <style name="style1.BigFont">
         <item name="android:textSize">50sp</item>
     </style>
@@ -23,4 +26,14 @@
     <color name="colorPrimary">#9C27B0</color>
     <color name="colorPrimaryDark">#FF9800</color>
     <color name="colorAccent">#E91E63</color>
+
+    <style name="Widget.MyApplication.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.MyApplication.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
 </resources>
