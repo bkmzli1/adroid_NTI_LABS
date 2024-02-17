@@ -1,4 +1,4 @@
-package ru.bkmz.myapplication;
+package com.example.lab_9;
 
 import org.junit.Test;
 
